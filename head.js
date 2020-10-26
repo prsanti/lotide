@@ -1,6 +1,6 @@
 const assertEqual = function(actual, expected) {
-  typeof actual === "string" ? actual = `\"${actual}\"` : null;
-  typeof expected === "string" ? expected = `\"${expected}\"` : null;
+  typeof actual === "string" ? actual = `"${actual}"` : null;
+  typeof expected === "string" ? expected = `"${expected}"` : null;
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
