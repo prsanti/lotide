@@ -43,7 +43,7 @@ const middle = function(array) {
   }
 
   return output;
-}
+};
 
 // Test Code
 // middle([1]) // => []
