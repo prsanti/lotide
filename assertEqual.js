@@ -4,16 +4,8 @@ const assertEqual = function(actual, expected) {
   typeof actual === "string" ? actual = `"${actual}"` : null;
   typeof expected === "string" ? expected = `"${expected}"` : null;
   if (actual === expected) {
-    // Old concatenate method with +
-    // console.log("✅✅✅" + " Assertion Passed: " + actual + " === " + expected);
-
-    // ES6 method
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    // Old concatenate method with +
-    // console.log("🛑🛑🛑" + " Assertion Failed: " + actual + " !== " + expected);
-
-    // ES6 method
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
@@ -23,3 +15,17 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual("hello", "hello");
 assertEqual(1,2);
+
+/*
+    // Old concatenate method with +
+    // console.log("✅✅✅" + " Assertion Passed: " + actual + " === " + expected);
+
+    // ES6 method
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+
+        // Old concatenate method with +
+    // console.log("🛑🛑🛑" + " Assertion Failed: " + actual + " !== " + expected);
+
+    // ES6 method
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+*/
