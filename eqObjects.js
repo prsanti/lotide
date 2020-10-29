@@ -22,8 +22,7 @@ const eqArrays = function(firstArray, secondArray) {
   }
   return equal;
 };
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+
 const eqObjects = function(object1, object2) {
   let equal = true;
   const object1Length = Object.keys(object1).length;
