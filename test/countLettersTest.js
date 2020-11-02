@@ -1,17 +1,16 @@
-const countLetters = require('../countLetters');
-const assertEqual = require('../assertEqual');
+const _ = require('../index');
 
 // Test Code
 const word = "lighthouse in the house";
-console.log(countLetters(word));
-assertEqual(countLetters(word)["l"], 1);
-assertEqual(countLetters(word)["i"], 2);
-assertEqual(countLetters(word)["g"], 1);
-assertEqual(countLetters(word)["h"], 4);
-assertEqual(countLetters(word)["t"], 2);
-assertEqual(countLetters(word)["o"], 2);
-assertEqual(countLetters(word)["u"], 2);
-assertEqual(countLetters(word)["s"], 2);
-assertEqual(countLetters(word)["e"], 3);
-assertEqual(countLetters(word)["n"], 1);
-assertEqual(countLetters(word)[" "], undefined);
+console.log(_.countLetters(word));
+_.assertEqual(_.countLetters(word)["l"], 1);
+_.assertEqual(_.countLetters(word)["i"], 2);
+_.assertEqual(_.countLetters(word)["g"], 1);
+_.assertEqual(_.countLetters(word)["h"], 4);
+_.assertEqual(_.countLetters(word)["t"], 2);
+_.assertEqual(_.countLetters(word)["o"], 2);
+_.assertEqual(_.countLetters(word)["u"], 2);
+_.assertEqual(_.countLetters(word)["s"], 2);
+_.assertEqual(_.countLetters(word)["e"], 3);
+_.assertEqual(_.countLetters(word)["n"], 1);
+_.assertEqual(_.countLetters(word)[" "], undefined);

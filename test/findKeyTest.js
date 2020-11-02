@@ -1,8 +1,7 @@
-const assertEqual = require('../assertEqual');
-const findKey = require('../findKey');
+const _ = require('../index');
 
 // Test Code
-assertEqual(findKey({
+_.assertEqual(_.findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -11,7 +10,7 @@ assertEqual(findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2), "noma"); // => pass
 
-assertEqual(findKey({
+_.assertEqual(_.findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
@@ -26,7 +25,7 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-assertEqual(findKey(bestTVShowsByGenre, x => x === "The Wire"), "drama"); // => Pass
-assertEqual(findKey(bestTVShowsByGenre, x => x === "The Expanse"), "sci_fi"); // => Pass
-assertEqual(findKey(bestTVShowsByGenre, x => x === "Brooklyn Nine-Nine"), "comedy"); // => Pass
-assertEqual(findKey(bestTVShowsByGenre, x => x === "That '70s Show"), undefined); // => Pass
+_.assertEqual(_.findKey(bestTVShowsByGenre, x => x === "The Wire"), "drama"); // => Pass
+_.assertEqual(_.findKey(bestTVShowsByGenre, x => x === "The Expanse"), "sci_fi"); // => Pass
+_.assertEqual(_.findKey(bestTVShowsByGenre, x => x === "Brooklyn Nine-Nine"), "comedy"); // => Pass
+_.assertEqual(_.findKey(bestTVShowsByGenre, x => x === "That '70s Show"), undefined); // => Pass

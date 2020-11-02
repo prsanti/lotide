@@ -1,7 +1,7 @@
-const assertEqual = require('../assertEqual')
-// assertEqual - Test Code
+const _ = require('../index');
 
-assertEqual("Lighthouse Labs", "Bootcamp"); // Fail
-assertEqual(1, 1);  // Pass
-assertEqual("hello", "hello"); // Pass
-assertEqual(1,2); // Fail
+// assertEqual - Test Code
+_.assertEqual("Lighthouse Labs", "Bootcamp"); // Fail
+_.assertEqual(1, 1);  // Pass
+_.assertEqual("hello", "hello"); // Pass
+_.assertEqual(1,2); // Fail
