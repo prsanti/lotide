@@ -1,24 +1,27 @@
-const eqArrays = function(firstArray, secondArray) {
-  let equal = false;
-  if (firstArray.length !== secondArray.length) {
-    equal = false;
-  } else if (firstArray.length === secondArray.length && firstArray.length === 0 && secondArray.length === 0) {
-    equal = true;
-  } else {
-    for (let i = 0; i < firstArray.length; i++) {
-      firstArray[i] === secondArray[i] ? equal = true : equal = false;
-    }
-  }
-  return equal;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(firstArray, secondArray) {
-  if (eqArrays(firstArray, secondArray)) {
-    console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
-  }
-};
+// const eqArrays = function(firstArray, secondArray) {
+//   let equal = false;
+//   if (firstArray.length !== secondArray.length) {
+//     equal = false;
+//   } else if (firstArray.length === secondArray.length && firstArray.length === 0 && secondArray.length === 0) {
+//     equal = true;
+//   } else {
+//     for (let i = 0; i < firstArray.length; i++) {
+//       firstArray[i] === secondArray[i] ? equal = true : equal = false;
+//     }
+//   }
+//   return equal;
+// };
+
+// const assertArraysEqual = function(firstArray, secondArray) {
+//   if (eqArrays(firstArray, secondArray)) {
+//     console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`);
+//   } else {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
+//   }
+// };
 
 const takeUntil = function(array, callback) {
   for (const item of array) {
@@ -28,25 +31,18 @@ const takeUntil = function(array, callback) {
   }
 };
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-console.log(results1);
+module.exports = takeUntil;
 
-console.log('---');
+// Test Cases
+// const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+// const results1 = takeUntil(data1, x => x < 0);
+// console.log(results1);
 
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
+// console.log('---');
 
-assertArraysEqual(takeUntil(data1, x => x < 0), [ 1, 2, 5, 7, 2 ]);
-assertArraysEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
+// const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+// const results2 = takeUntil(data2, x => x === ',');
+// console.log(results2);
 
-// for (let i = 0; i < array.length; i++) {
-//   if (callback(array[i])) {
-//     return array.slice(0, i);
-//   }
-// }
-
-//return array.filter(x => x < 0);
-// console.log(array.indexOf(callback));
-// return array.slice(0, array.indexOf(callback))
+// assertArraysEqual(takeUntil(data1, x => x < 0), [ 1, 2, 5, 7, 2 ]);
+// assertArraysEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]);

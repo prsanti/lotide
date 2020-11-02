@@ -10,11 +10,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+module.exports = assertEqual;
+
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("hello", "hello");
-assertEqual(1,2);
+// assertEqual("Lighthouse Labs", "Bootcamp"); // Fail
+// assertEqual(1, 1);  // Pass
+// assertEqual("hello", "hello"); // Pass
+// assertEqual(1,2); // Fail
 
 /*
     // Old concatenate method with +
