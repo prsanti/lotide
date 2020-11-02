@@ -1,5 +1,9 @@
 const tail = (array) => {
-  return array.slice(1);
+  if (array) {
+    return array.slice(1);
+  } else {
+    return [];
+  }
 };
 
 module.exports = tail;
