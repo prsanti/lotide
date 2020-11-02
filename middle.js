@@ -1,31 +1,3 @@
-const assertEqual = require('./assertEqual');
-const eqArrays = require('./eqArrays');
-
-// const assertEqual = function(actual, expected) {
-//   // adds "" before and after actual and expected if they are strings
-//   typeof actual === "string" ? actual = `"${actual}"` : null;
-//   typeof expected === "string" ? expected = `"${expected}"` : null;
-//   if (actual === expected) {
-//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
-// const eqArrays = function(firstArray, secondArray) {
-//   let equal = false;
-//   if (firstArray.length !== secondArray.length) {
-//     equal = false;
-//   } else if (firstArray.length === secondArray.length && firstArray.length === 0 && secondArray.length === 0) {
-//     equal = true;
-//   } else {
-//     for (let i = 0; i < firstArray.length; i++) {
-//       firstArray[i] === secondArray[i] ? equal = true : equal = false;
-//     }
-//   }
-//   return equal;
-// };
-
 const middle = function(array) {
   const arrLength = array.length;
   const middleIndex = [];
@@ -48,13 +20,3 @@ const middle = function(array) {
 };
 
 module.exports = middle;
-
-// Test Code
-// assertEqual(eqArrays(middle([1]), []), true);
-// assertEqual(eqArrays(middle([1, 2]), []), true);
-// assertEqual(eqArrays(middle([1, 2, 3]), [2]), true);
-// assertEqual(eqArrays(middle([1, 2, 3, 4, 5]), [3]), true);
-// assertEqual(eqArrays(middle([1, 2, 3, 4]), [2, 3]), true);
-// assertEqual(eqArrays(middle([1, 2, 3, 4, 5, 6]), [3, 4]), true);
-// assertEqual(eqArrays(middle([1, 2, 3, 4]), [3]), false);
-// assertEqual(eqArrays(middle([1, 2, 3, 4]), [2]), false);

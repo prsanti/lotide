@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   // adds "" before and after actual and expected if they are strings
   typeof actual === "string" ? actual = `"${actual}"` : null;
@@ -11,12 +10,6 @@ const assertEqual = function(actual, expected) {
 };
 
 module.exports = assertEqual;
-
-// TEST CODE
-// assertEqual("Lighthouse Labs", "Bootcamp"); // Fail
-// assertEqual(1, 1);  // Pass
-// assertEqual("hello", "hello"); // Pass
-// assertEqual(1,2); // Fail
 
 /*
     // Old concatenate method with +

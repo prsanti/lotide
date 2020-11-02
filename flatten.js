@@ -1,5 +1,4 @@
-const assertEqual = require('./assertEqual');
-const eqArrays = require('./eqArrays');
+
 
 // const assertEqual = function(actual, expected) {
 //   // adds "" before and after actual and expected if they are strings
@@ -35,9 +34,3 @@ const flatten = function(arrayList) {
 };
 
 module.exports = flatten;
-
-// Test Code
-// console.log(flatten([1, 2, [3, 4], 5, [6]]));
-// console.log(flatten([[1, 2], [[[3, 4]]], [5, [6]]]));
-// assertEqual(eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]), true);
-
