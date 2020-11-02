@@ -1,11 +1,29 @@
 const _ = require('../index');
+const assert = require('chai').assert;
 
 // Test Code
-_.assertEqual(_.eqArrays(_.middle([1]), []), true);
-_.assertEqual(_.eqArrays(_.middle([1, 2]), []), true);
-_.assertEqual(_.eqArrays(_.middle([1, 2, 3]), [2]), true);
-_.assertEqual(_.eqArrays(_.middle([1, 2, 3, 4, 5]), [3]), true);
-_.assertEqual(_.eqArrays(_.middle([1, 2, 3, 4]), [2, 3]), true);
-_.assertEqual(_.eqArrays(_.middle([1, 2, 3, 4, 5, 6]), [3, 4]), true);
-_.assertEqual(_.eqArrays(_.middle([1, 2, 3, 4]), [3]), false);
-_.assertEqual(_.eqArrays(_.middle([1, 2, 3, 4]), [2]), false);
+describe("#middle", () => {
+  it("returns an empty array when calling middle with 1 element", () => {
+    assert.deepEqual(_.middle([1]), []);
+  });
+
+  it("returns an empty array when calling middle with 2 elements", () => {
+    assert.deepEqual(_.middle([1, 2]), []);
+  });
+
+  it("returns [2] when calling middle with [1, 2, 3]", () => {
+    assert.deepEqual(_.middle([1, 2, 3]), [2]);
+  });
+
+  it("returns [3] when calling middle with [1, 2, 3, 4, 5]", () => {
+    assert.deepEqual(_.middle([1, 2, 3, 4, 5]), [3]);
+  });
+
+  it("returns [2, 3] when calling middle with [1, 2, 3, 4]", () => {
+    assert.deepEqual(_.middle([1, 2, 3, 4]), [2, 3]);
+  });
+
+  it("calling middle with [1, 2, 3, 4] will not return [2]", () => {
+    assert.notDeepEqual(_.middle([1, 2, 3, 4]), [2]);
+  });
+});
